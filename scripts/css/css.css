@@ -1,3 +1,7 @@
+@media screen and (max-width: 750px) {
+    
+}
+
 * {
     font-family: 'Manrope', sans-serif;
 }
@@ -30,6 +34,8 @@ body {
 
 .text {
     font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .card{
@@ -104,17 +110,55 @@ body {
     padding: 10px;
     align-self: center;
     justify-self: center;
-}
-/*
-.button:hover{
-    background-color: hsl(214, 17%, 51%) !important;
+    position: relative;
 }
 
-.flecha:hover{
-    filter: brightness(100)!important
+.tooltip {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tooltip-text {
+    position: absolute;
+    display: none;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+    z-index: 1;
+    /* position */
+    bottom: 200%;
+    width: 150px;
+    margin-left: -70px;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+    color:  hsl(212, 23%, 69%);
+    border: 1px solid hsl(217, 19%, 35%);
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 42%;
+    margin-left: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+/*
+.tooltip:active .tooltip-text {
+    visibility: visible;
 }
 */
 
-.hide {
-    display: none;
+.button:hover .flecha {
+    filter: brightness(100);
+
+}
+.button:hover {
+    background-color: hsl(217, 19%, 35%);
 }
