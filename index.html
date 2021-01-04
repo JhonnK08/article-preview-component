@@ -42,9 +42,9 @@
           <a id="botao" class="button" href="#" onclick="teste()"><img id="flecha" src="images/icon-share.svg" alt="" style="width: 15px;" class="flecha"></a>
           <div class="tooltip-text" id="tooltip">
             <span>Share</span>
-            <img src="images/icon-facebook.svg" alt="Facebook">
-            <img src="images/icon-pinterest.svg" alt="Pinterest">
-            <img src="images/icon-twitter.svg" alt="Twitter">
+            <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+            <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
           </div>
         </div>
       </div>
@@ -60,11 +60,24 @@
 
   <script>
     function teste() {
-      var tooltip = document.getElementById("tooltip")
-      if (window.getComputedStyle(tooltip).display === "none") {
-        tooltip.style.display = "flex"
-      } else if (window.getComputedStyle(tooltip).display === "flex") {
-        tooltip.style.display = "none"
+      var w = window.outerWidth;
+      var h = window.outerHeight;
+      console.log("Width: " + w + " Height: " + h);
+      if (w > 700) {
+        var tooltip = document.getElementById("tooltip")
+        if (window.getComputedStyle(tooltip).display === "none") {
+          tooltip.style.display = "flex"
+        } else if (window.getComputedStyle(tooltip).display === "flex") {
+          tooltip.style.display = "none"
+        }
+      }
+      else {
+        var tooltip = document.getElementById("tooltip")
+        if (window.getComputedStyle(tooltip).display === "none") {
+          tooltip.style.display = "flex"
+        } else if (window.getComputedStyle(tooltip).display === "flex") {
+          tooltip.style.display = "none"
+        }
       }
     }
   </script>

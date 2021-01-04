@@ -1,5 +1,56 @@
 @media screen and (max-width: 750px) {
+    .card{
+        flex-direction: column;
+        width: 80% !important;
+        height: 90% !important;
+    }
+    .left {
+        position: relative !important;
+        width: 100% !important;
+        height: 50% !important;
+        overflow: hidden !important;
+    }
+    .right{
+        padding: 20px !important;
+        margin: auto !important;
+        width: initial !important;
+    }
+    .image-card {
+        clip-path: unset !important;
+        width: 100%;
+        height: 50%;
+        border: unset !important;
+        border-bottom-left-radius: unset !important;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+
+    .author {
+        padding-top: 20px !important;
+    }
+
+    .tooltip-text {
+        position: relative !important;
+        align-items: center;
+        align-content: space-around;
+        justify-content: space-around;
+        z-index: 1;
+        /* position */
+        bottom: initial !important;
+        width: 100% !important;
+        margin-left: initial !important;
+        border-radius: 10px;
+        text-transform: uppercase;
+        padding: 10px;
+    }
     
+    .tooltip-text::after {
+        content: '';
+        position: relative !important;
+        top: initial !important;
+        left: initial !important;
+        margin-left: initial !important;
+    }
 }
 
 * {
